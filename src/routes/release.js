@@ -6,6 +6,8 @@ const createDOMPurify = require('dompurify');
 const { JSDOM } = require('jsdom');
 const Prism = require('prismjs');
 const semver = require('semver');
+const parsedStart = semver.parse(startVersion);
+const parsedEnd = semver.parse(endVersion);
 
 const a = require('../utils/a');
 const { getGitHubRelease, getReleasesOrUpdate, getTSDefs } = require('../data');
